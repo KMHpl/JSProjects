@@ -1,0 +1,1170 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8"/>
+    <title>Projekt mapy google</title>
+    <script src="libs/jquery-3.1.0.min.js"></script>
+    <script src="libs/gmap3.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsmFFSusM6vUoHkKXGCJiLYvwRPMcMjDY&region=PL"></script>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin-ext" rel="stylesheet">
+    
+    <script>var licznik = 1;
+
+        var tablica = [];
+        var ls = window.localStorage;
+
+        $(document).ready(function () {
+		
+            $( "#kolorki" ).fadeOut( 500, function() {
+                // koniec animacji
+            })
+
+ $( "#kolorki2" ).fadeOut( 500, function() {
+                // koniec animacji
+            })
+		
+
+
+
+            var majonez2=0
+
+            majonez2++;
+
+            for(kotlet=0;kotlet < 3;kotlet++){
+                for(kotlet2=0;kotlet2 < 3;kotlet2++){
+
+                    var kolor = $("<div>")
+                    kolor.attr("id", "kolor"+ majonez2)
+                    $("#ograniczenie").append(kolor)
+                    majonez2++
+                }
+            }
+
+var majonez3=0
+
+            
+
+            for(kotlet2=0;kotlet2 < majonez3 ;kotlet2++){
+                
+
+                    var kolor2 = $("<div>")
+                    kolor2.attr("id", "kolor2"+ majonez3)
+                    $("#ograniczenie2").append(kolor)
+                    majonez3++
+                
+            }
+
+
+
+
+
+            a=0
+            $("#kolorrr").on("click", function () {
+                if(a==0)
+                {
+	
+                    $( "#kolorki" ).fadeIn( 500, function() {
+                        // koniec animacji
+                    })
+
+                    a=a+1
+                }
+                else
+                {
+                    $( "#kolorki" ).fadeOut( 500, function() {
+                        // koniec animacji
+                    })
+                    a=a-1
+                }
+				if(a==0)
+				$( "#kolorki2" ).fadeOut( 500, function() {
+                // koniec animacji
+            })
+            })
+
+//////////////////////
+//
+//
+//
+//
+//
+//
+/////////////
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+            
+            $("#kolor2").on("click", function () {
+                $('#mapa').gmap3({
+                    clear: { name: ["circle","polyline"],
+                        last:true
+    
+                    }
+                })
+            	
+                $("#mapa").gmap3({
+                    marker: {
+                        values: tablica
+                    },
+
+                    polyline: { // wielokąt
+                        options: {
+                            strokeColor: ("red"),
+                            strokeOpacity: 0.5,
+                            strokeWeight: 4,
+                            path: tablica
+                        }
+                    }
+
+                })
+                
+
+           	
+
+
+        
+
+
+
+        })
+		
+		
+		
+		/////////////////////
+		
+		
+		
+		$("#kolor1").on("click", function () {
+                $('#mapa').gmap3({
+                    clear: { name: ["circle","polyline"],
+                        last:true
+    
+                    }
+                })
+            	
+                $("#mapa").gmap3({
+                    marker: {
+                        values: tablica
+                    },
+
+                    polyline: { // wielokąt
+                        options: {
+                            strokeColor: ("blue"),
+                            strokeOpacity: 0.5,
+                            strokeWeight: 4,
+                            path: tablica
+                        }
+                    }
+
+                })
+                
+
+           	
+
+
+        
+
+
+
+        })
+		$("#kolor21").on("click", function () {
+                $('#mapa').gmap3({
+                    clear: { name: ["circle","polyline"],
+                        last:true
+    
+                    }
+                })
+            	
+                $("#mapa").gmap3({
+                    marker: {
+                        values: tablica
+                    },
+
+                    polyline: { // wielokąt
+                        options: {
+                            strokeColor: ("#0000ff"),
+                            strokeOpacity: 0.5,
+                            strokeWeight: 4,
+                            path: tablica
+                        }
+                    }
+
+                })
+                
+
+           	
+
+
+        
+
+
+
+        })
+		$("#kolor22").on("click", function () {
+                $('#mapa').gmap3({
+                    clear: { name: ["circle","polyline"],
+                        last:true
+    
+                    }
+                })
+            	
+                $("#mapa").gmap3({
+                    marker: {
+                        values: tablica
+                    },
+
+                    polyline: { // wielokąt
+                        options: {
+                            strokeColor: ("#0066ff"),
+                            strokeOpacity: 0.5,
+                            strokeWeight: 4,
+                            path: tablica
+                        }
+                    }
+
+                })
+                
+
+           	
+
+
+        
+
+
+
+        })
+		$("#kolor23").on("click", function () {
+                $('#mapa').gmap3({
+                    clear: { name: ["circle","polyline"],
+                        last:true
+    
+                    }
+                })
+            	
+                $("#mapa").gmap3({
+                    marker: {
+                        values: tablica
+                    },
+
+                    polyline: { // wielokąt
+                        options: {
+                            strokeColor: ("#0099ff"),
+                            strokeOpacity: 0.5,
+                            strokeWeight: 4,
+                            path: tablica
+                        }
+                    }
+
+                })
+                
+
+           	
+
+
+        
+
+
+
+        })
+		
+
+
+
+
+
+liczbaaa=0
+/////////////////////////////
+
+
+$("#kolor1").on("click", function () {
+                
+			
+			if (liczbaaa==0)
+
+			{
+			$( "#kolorki2" ).fadeIn( 500, function() {
+                // koniec animacji
+            })
+			liczbaaa++
+			}
+			else{
+			$( "#kolorki2" ).fadeOut( 500, function() {
+                // koniec animacji
+            })
+			liczbaaa--
+			}
+           	
+
+
+        
+
+
+
+        })
+		
+
+
+
+
+
+
+
+if (ls.getItem("daneLokalizacyjne")) {
+                tablica = JSON.parse(ls.getItem("daneLokalizacyjne"));
+
+                for (i = 0; i < tablica.length; i++) {
+                    $("#mapa").gmap3({
+                        marker: {
+                            values: [
+                                { latLng: [tablica[i].lat, tablica[i].lng], id: (i + 1) },
+                            ]
+                        }
+                    })
+                }
+
+
+                for (i = 0; i < tablica.length; i++) {
+
+                    var li = $("<li>"), s = $("<span>")
+                    s.html("X")
+                    $(li).html("Lokalizacja" + licznik)
+                    $(li).attr("id", licznik)
+                    li.on("click", function () {
+                        $("#mapa").gmap3({
+                            map: {
+                                options: {
+                                    center: [tablica[$(this).index()].lat, tablica[$(this).index()].lng],
+                                    zoom: tablica[$(this).index()].zoom
+                                }
+                            }
+                        })
+                    })
+
+
+                    s.on("click", function () {
+                        $('#mapa').gmap3({
+                            clear: {
+                                id: $(this).parent().attr("id")
+                            }
+                        });
+
+                        tablica.splice($(this).parent().index() - 1, 1);
+                        $(this).parent().remove()
+                    })
+                    li.append(s)
+                    $("#lista").append(li);
+                    licznik++;
+                }
+
+
+                $("#zapisz-lokalizacje").on("click", function () {
+                    ls.setItem("daneLokalizacyjne", JSON.stringify(tablica));
+                })
+
+
+                $("#rysuj").on("click", function () {
+                    $("#mapa").gmap3({
+                        clear: {
+                            name: ["circle", "polyline"],
+                            last: true
+                        },
+                        polyline: {
+                            options: {
+                                strokeColor: "#0000ff",
+                                strokeOpacity: 0.5,
+                                strokeWeight: 4,
+                                path: tablica
+                            }
+                        }
+                    });
+                })
+            }
+
+
+            $("#mapa").gmap3({
+                map: {
+
+                    options: {
+                        center: [50.047074, 19.921541],
+                        zoom: 15,
+                        disableDefaultUI: true
+
+                    },
+                }
+            })
+
+
+            $("#przesuwanie1").on("input", function () {
+                var x = parseInt($("#przesuwanie1").val())
+                $("#mapa").gmap3({
+                    map: {
+                        options: {
+                            center: [x, $("#przesuwanie2").val()]
+                        }
+                    }
+                })
+            })
+
+
+            $("#przesuwanie2").on("input", function () {
+                var y = parseInt($("#przesuwanie2").val())
+                $("#mapa").gmap3({
+                    map: {
+                        options: {
+                            center: [$("#przesuwanie1").val(), y]
+                        }
+                    }
+                })
+            })
+
+            $("#przesuwanie3").on("input", function () {
+                var powiekszenie = parseInt($("#przesuwanie3").val())
+                $("#mapa").gmap3({
+                    map: {
+                        options: {
+                            zoom: powiekszenie
+                        }
+                    }
+                })
+            })
+
+
+            $("#usun").on("click", function () {
+                $("#lista").empty();
+                ls.clear();
+                tablica = [];
+
+
+                for (i = 1; i <= licznik; i++) {
+                    $('#mapa').gmap3({
+                        clear: {
+                            id: i
+                        }
+                    });
+                }
+
+
+                $('#mapa').gmap3({
+                    clear: {
+                        name: ["marker", "circle", "polyline"],
+                        last: true
+                    }
+                });
+
+                licznik = 1;
+            })
+
+
+            $("#mapa").gmap3({
+                map: {
+                    events: {
+                        click: function (map, event) {
+
+                            var li = $("<li>"), s = $("<span>")
+                            s.html("X")
+                            s.on("click", function () {
+                                $(this).parent().remove()
+
+
+                                $('#mapa').gmap3({
+                                    clear: {
+                                        id: $(this).parent().attr("id")
+                                    }
+                                });
+
+
+                                tablica.splice($(this).parent().index() - 1, 1);
+                            })
+
+                            $(li).html("Lokalizacja" + licznik)
+                            $(li).attr("id", licznik)
+                            tablica.push({ lat: event.latLng.lat(), lng: event.latLng.lng(), zoom: map.getZoom() });
+                            $("#lista").append(li);
+                            li.append(s)
+
+
+                            var fenway = new google.maps.LatLng(event.latLng.lat(), event.latLng.lng());
+                            $("#mapa").gmap3({
+                                marker: {
+                                    values: [
+                                      { latLng: [event.latLng.lat(), event.latLng.lng()], id: licznik, },
+                                    ]
+                                },
+
+
+                                streetviewpanorama: {
+                                    options: {
+                                        container: $("#streetview"),
+                                        opts: {
+                                            position: fenway,
+                                            pov: {
+                                                heading: 34,
+                                                pitch: 10,
+                                                zoom: 1
+                                            }
+                                        }
+                                    }
+                                },
+                            })
+                            licznik++;
+
+
+                            li.on("click", function (e) {
+                                $("#mapa").gmap3({
+                                    map: {
+                                        options: {
+                                            center: [tablica[$(this).index()].lat, tablica[$(this).index()].lng, ],
+                                            zoom: tablica[$(this).index()].zoom,
+                                        }
+                                    }
+                                })
+                            })
+
+
+                            $("#zapisz-lokalizacje").on("click", function () {
+                                ls.setItem("daneLokalizacyjne", JSON.stringify(tablica));
+                            })
+
+                        }
+                    }
+                }
+            });
+
+
+            var czyWysuniety = false;
+            $("#wysun").on("click", function () {
+                if (czyWysuniety == false) {
+                    $("#wysuwany-panel").animate({ "left": "0px" }, 500);
+                    czyWysuniety = true;
+                }
+                else {
+                    $("#wysuwany-panel").animate({ "left": "-100%" }, 500);
+                    czyWysuniety = false;
+                }
+
+            })
+            $("#rysuj").on("click", function () {
+                $("#mapa").gmap3({
+                    marker: {
+                        values: tablica
+                    },
+
+                    polyline: { // wielokąt
+                        options: {
+                            strokeColor: "#0000ff",
+                            strokeOpacity: 0.5,
+                            strokeWeight: 4,
+                            path: tablica
+                        }
+                    }
+
+                });
+            })
+			  $("#bt7").click(function () {
+                var x;
+                var y;
+
+                navigator.geolocation.getCurrentPosition(
+				function (position) {
+				    //bieżąca pozycja lat i lng
+				    x = position.coords.latitude;
+				    y = position.coords.longitude
+				    $("#mapa").gmap3
+                    ({
+                        marker:
+                        {
+
+                            options:
+                            {
+                                draggable: true
+                            },
+                            latLng: [x, y]
+
+                        },
+                        streetviewpanorama: {
+                            options: {
+                                container: $("#streetview"),
+                                opts: {
+                                    position: [x, y],
+                                    pov: {
+                                        heading: 34,
+                                        pitch: 10,
+                                        zoom: 10
+                                    }
+                                }
+                            }
+                        },
+                        map:
+                        {
+                            options:
+                            {
+                                center: [x, y],
+                                zoom: 10,
+                                disableDefaultUI: true
+                            }
+                        },
+
+
+                    })
+				},
+				function (error) {
+				    console.log("problem z lokalizacją")
+				},
+				{
+				    maximumAge: 10000,
+				    // czas dostępu do danych 
+				    timeout: 15000,
+				    enableHighAccuracy: true//dokładność
+				}
+
+				)
+
+            });
+            var fullDate = new Date()
+            console.log(fullDate);
+            
+            //moja[0]
+           
+         
+            $("#savetofile").on("click", function () {
+                var name = window.prompt("Podaj nazwę wycieczki")
+                var path = "";
+                for (var l = 0; l < tablica.length; l++) {
+                    if (l > 0)
+                        path += ","
+                    path += "[" + tablica[l].lat + "," + tablica[l].lng + "," + tablica[l].zoom + "]"
+                }
+
+			    var obj = {
+                    nazwa: name,
+                    kolor: "red",
+                    punkty_wycieczki: path,
+			    }
+                console.log(obj)
+                //ajax
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:69676/mapa/ReadFile.aspx",
+                    data: obj,
+                    dataType: "text",
+                    success: function (response) {
+                        alert("komunikat z serwera:" + response )
+                    },
+                    error: function (xhr) {
+                        alert("błąd " + xhr.responseText)
+                    }
+                })
+            })
+
+            $("#loadtofile").on("click", function () {
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:69676/mapa/ReadFile.aspx",
+                    dataType: "text",
+                    success: onSuccess,
+                    error: function (response) {
+                        alert(response.responseText)
+                    }
+                });
+
+                function onSuccess(response) {
+
+                    alert(response)
+                    console.log(response)
+                    var allTripsOnServer = JSON.parse(response);
+                    //alert(allTripsOnServer.length)
+                    
+                    //jedna wycieczka - numer 0 w pliku txt
+                    /*
+                    for (var ter = 0; ter < allTripsOnServer.length; ter++)
+                    {
+                        var ftrip = allTripsOnServer[ter];
+                        $("#wysun2").append("<div>" + ftrip[0] + " | " + ftrip[2] + "</div>")
+                    }
+                    */
+                    for (var ter = 0; ter < allTripsOnServer.length; ter++)
+                    {
+                        var ftrip = allTripsOnServer[ter];
+                        var elm = document.createElement("div");
+                        elm.id = "wyc" + ter;
+                        elm.onclick = function () {
+                            niew = this.id;
+                            nieww = niew.slice(3, 4);
+                            ntrip = allTripsOnServer[nieww];
+                            alert("Nazwa: " + ntrip[0] + "\nData: " + ntrip[2])
+                            
+                            pomocnatablica = [];
+                            jakislicznik = 0;
+                            for (var xoxox = 3; xoxox < ntrip.length; xoxox++)
+                            {
+                                pomocnatablica[jakislicznik] = ntrip[xoxox];
+                                jakislicznik++;
+                            }
+
+                            $("#mapa").gmap3({
+                                marker: {
+                                    values: pomocnatablica
+                                },
+                                polyline: {
+                                    options: {
+                                        strokeColor: "#ff0000",
+                                        strokeOpacity: 0.5,
+                                        strokeWeight: 4,
+                                        path: pomocnatablica
+                                    }
+                                },
+                                autofit: {} // focus na wycieczkę - przybliżenie
+
+                            })
+                            
+
+                        }
+                        document.getElementById("wysun2").appendChild(elm)
+                        $("#wyc" + ter).append(ftrip[0] + " | " + ftrip[2])
+                    }
+
+                    
+
+                    // teraz pobieram z tablicy tylko dane geolokacyjne
+                    // pomijam imie, kolor i datę, (do wymyślenia samodzielnie)
+
+                    
+                }
+            })
+			var czy = 0
+			$("#przycisk2").on("click", function () {
+                if (czy == 0) {
+                    $("#wysun2").animate({ "left": "0px" }, 500);
+                    czy++;
+                }
+                else {
+                    $("#wysun2").animate({ "left": "-200%" }, 500);
+                    czy--;
+                }
+            })
+			
+
+
+            //-------------------------------------------------------------------------------------------
+
+
+            $("#map1").click(function () {
+var map = $("#mapa").gmap3("get");
+map.setMapTypeId(google.maps.MapTypeId.HYBRID)
+})
+$("#map2").click(function () {
+var map = $("#mapa").gmap3("get");
+map.setMapTypeId(google.maps.MapTypeId.ROADMAP)
+})
+$("#map3").click(function () {
+var map = $("#mapa").gmap3("get");
+map.setMapTypeId(google.maps.MapTypeId.SATELLITE)
+})
+
+           
+            /*-------------------------------------------------------------------------*/
+
+        })</script>
+
+
+
+
+    <style>
+      
+body, html {
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    min-width: 720px;
+}
+
+#pojemnik {
+    width: 100%;
+    height: 100%;
+}
+
+#mapa {
+    background: blue;
+    display: inline-block;
+    height: 100vh;
+    width: 70%;
+    float: left;
+}
+
+#przesuwak {
+    width: 3px;
+    background:blue;
+    background-image: url(/menu2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    float: left;
+}
+
+#panel {
+    display: inline-block;
+    background: white;
+    height: 100vh;
+    width: calc(30% - 20px);
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+    overflow-y: scroll;
+}
+
+#zapisz-lokalizacje, #usun, #rysuj, #bt7, #bt8, #bt9,#kolorrr, #savetofile,#loadtofile{
+   width: 100%;
+   font-family: 'PT Sans', sans-serif;
+   font-size: 1.5em;
+   padding: 3px;
+   background: none;
+   border: none;
+   border-top: 2px solid black;
+   border-bottom: 2px solid black;
+   margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: blue;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ddd;
+}
+
+.przesuwaki {
+    width: 100%;
+    display: block;
+   
+    margin-top: 3em;
+}
+
+#panel h1{
+    text-align: center;
+    
+    margin-top: 2em;
+    border-top: 3px solid blue;
+    border-bottom: 3px solid blue;
+    padding: 10px;
+    margin-left:-5px;
+    margin-right:-5px;
+}
+
+#panel ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+#panel li{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 7px;
+    position: relative;
+}
+
+#panel li:hover{
+    background:#ff00ff;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+#panel #lista li span{
+    position: absolute;
+    right: 10px;
+}
+
+#panel #lista li span:hover{
+    font-weight: bold;
+}
+
+#wysuwany-panel{
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: calc(30% - 10px);
+    min-width: 200px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 100vh;
+    background: white;
+    z-index: 997;
+}
+
+#wysun{
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    z-index: 998;
+    width: 20px;
+    height: 20px;
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  
+    background-image: url(menu.png);
+}
+
+.googlemap{
+    margin-top: 20px;
+    width: 100%;
+    height: calc(100vh - 260px);
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+        #streetview {
+    min-height:400px;        
+    margin-top:10px;
+        
+}
+
+#kolorki
+{
+   background:rgba(50,50,50, 0.80);
+height:100%;
+width:100%;
+position:absolute;
+
+}
+#kolorki #ograniczenie div
+{
+height:60px;
+width:60px;
+
+margin:30px;
+float:left;
+border-radius:50%;
+}
+#kolorki2 #ograniczenie2 div
+{
+height:100px;
+width:100px;
+
+margin:30px;
+float:left;
+border-radius:50%;
+}
+#ograniczenie
+{
+width:400px;
+background-color:;
+position:absolute;
+left:40%;
+top:30%;
+
+}
+
+#ograniczenie2
+{
+width:100px;
+background-color:;
+position:absolute;
+left:60%;
+top:24%;
+
+}
+#kolor21{
+background-color:#0000FF;}
+#kolor22{
+background-color:#0066FF;}
+#kolor23{
+background-color:#0099ff;}
+
+#mapki
+{
+width:100%
+height:100px;
+}
+
+#kolor1{
+background-color:blue;}
+#kolor2{
+background-color:red;}
+#kolor3{
+background-color:orange;}
+#kolor4{
+background-color:#ffffff;}
+#kolor5{
+background-color:black;}
+#kolor6{
+background-color:yellow;}
+#kolor7{
+background-color:#ff00ff;}
+#kolor8{
+background-color:#00ff00;}
+#kolor9{
+background-color:#00ffff;}
+ #wysun2 p{
+        width:100%;
+        height:10%;
+        }
+        #wysun2 div {
+        background-color: lightblue;
+        width: 90%;
+        height: 50px;
+        border-bottom:1px black solid;
+        margin-left: 5%;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 20px;
+        }
+		.wprzycisk2
+        {
+        position: absolute;
+        height: 50px;
+        width:50px;
+        z-index: 999;
+        margin-top: 10px;
+        margin-left: 80px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<input id="przycisk2" class="wprzycisk2" type="button"/>
+    <div id="pojemnik">
+        <div id="wysun"></div>
+        <div id="wysuwany-panel">
+            <input id="zapisz-lokalizacje" type="button" value="Zapisz lokalizacje" />
+            <input id="usun" type="button" value="Kasuj" />
+            <input id="rysuj" type="button" value="Wyznacz Drogę" />
+	<input type="button" id="bt7" value="Generuj lokalizację" />
+          
+<input id="kolorrr" type="button" value="Wybierz kolor" />
+  <input type="button" id="savetofile" value="Wyślij na serwer" />
+<input id="loadtofile" type="button" value="Pobierz wycieczke" />
+
+<div id="mapki">
+<img id="map1" src="map1.jpg" alt="Tekst alternatywny" width="120px" height="120px" />
+<img id="map2" src="map2.png" alt="Tekst alternatywny" width="120px" height="120px" />
+<img id="map3" src="map3.png" alt="Tekst alternatywny" width="120px" height="120px" />
+</div>
+<div id="wysun2">
+            <p></p>
+        </div>
+
+		 
+
+           
+            <div id="streetview"></div>
+        </div>
+        <div id="mapa">
+
+        </div>
+
+
+	
+
+
+
+
+        <div id="przesuwak"></div>
+        <div id="panel">
+            <input id="przesuwanie1" class="przesuwaki" type="range" min="-90" max="90" value="50.047074"/>
+            <input id="przesuwanie2" class="przesuwaki" type="range" min="-180" max="180" value="19.921541"/>
+            <input id="przesuwanie3" class="przesuwaki" type="range" min="1" max="15" value="15"/>
+            
+		
+            <h1>Menu</h1>
+            
+            <ul id="lista">
+            </ul>
+        </div>
+<div id="kolorki">
+<div id="ograniczenie">
+</div>
+</div>
+
+<div id="kolorki2">
+	<div id="ograniczenie2">
+	<div id="kolor21"></div>
+	<div id="kolor22"></div>
+	<div id="kolor23"></div>
+	</div>
+</div>
+
+
+    </div>
+</body>
+</html>
